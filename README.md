@@ -29,7 +29,10 @@ Tensorflow 2.0>=
 
 ## Reproducing the results
 
-train_capacity.py can be use to generate the paper results.
+train_capacity2 can be use to generate the paper results.
+
+Note:
+In the first run, you have to keep --generatedate argument to 1 to generate simulations. 
 
 
 <!-- ACKNOWLEDGMENTS -->
