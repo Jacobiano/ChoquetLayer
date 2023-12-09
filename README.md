@@ -38,7 +38,9 @@ In the first run, you have to keep --generatedate argument to 1 to generate simu
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-This project was partially supported by
+The authors gratefully acknowledge the financial support of Institut Carnot (grant 220000496).
+
+This work was granted access to the HPC resources of IDRIS under the allocation 2023-AD011012212R2 made by GENCI
 
 
 
