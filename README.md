@@ -1,18 +1,10 @@
-# ChoquetLayer
+# Choquet capacity networks for random point process classification and regression
 
 <!-- CONTACT -->
 ## Contact
 Santiago VELASCO-FORERO
 [Personal Website](https://people.cmm.minesparis.psl.eu/users/velasco/)
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-This project was partially supported by
-
-
-
-# Choquet Layer
 
 > This is a template for papers that use Python code and Jupyter notebooks to
 > generate their results (though it can be adapted to use other technologies).
@@ -126,6 +118,13 @@ Each cell can be executed using `Shift + Enter`.
 Executing text cells does nothing and executing code cells runs the code
 and produces it's output.
 To execute the whole notebook, run all cells in order.
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+This project was partially supported by
+
 
 
 ## License
