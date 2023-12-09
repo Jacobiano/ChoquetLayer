@@ -8,12 +8,10 @@ from tensorflow.keras import layers
 from tensorflow.keras.layers import Layer
 from skimage.io import imread
 from shutil import copyfile
-#import tensorflow_probability as tfp
 print(tf.__version__)
 import matplotlib.pyplot as plt
 plt.gray()
 from sklearn.metrics import accuracy_score
-#import tensorflow_probability as tfp
 import random
 import json
 import datetime
@@ -32,12 +30,12 @@ parser.add_argument('--nfilters', type=float, default=48, help='nfilters')
 parser.add_argument('--ksize', type=float, default=13, help='ksize')
 parser.add_argument('--featurespace', type=float, default=12, help='featurespace')
 parser.add_argument('--shrink', type=float, default=4, help='shrink')
-parser.add_argument('--generatedata', type=float, default=1, help='generate')
+parser.add_argument('--generatedata', type=float, default=1, help='One if to generate the Neyman-Scott point process')
 
 args = parser.parse_args()
 
 
-PATHOUT=args.pathoutput #'/gpfsstore/rech/qpj/uyn98cq/TransformationInvariant/'
+PATHOUT=args.pathoutput
 
 BATCH_SIZE = int(args.batch)
 EPOCHS = int(args.epochs)
@@ -57,7 +55,6 @@ pathoutput=str(args.pathoutput)
 output_dir_root =pathoutput
 
 test_name=random.choice(number)+random.choice(adjective)+random.choice(colors)+random.choice(words)
-#timeDir=get_time()
 dir_name = output_dir_root + "_" + test_name
 print('dir_name',dir_name)
 
@@ -70,19 +67,13 @@ if LOG:
    this_file_name = os.path.basename(__file__)
    copyfile(__file__, os.path.join(dir_name, this_file_name))
    print('copyfile','ok')
-   #print('dir_name plus parameter  json')
-   #print(os.path.join(dir_name, "parameter.json"))
-   #outfile=open(os.path.join(dir_name, "parameter.json"), 'w' )
-   #jsondic=vars(args)
-   #jsondic["dir_name"] = dir_name
-   #json.dump(jsondic,outfile)
-   #outfile.close()
 
 class NeymanScott:
     """
     Neyman-Scott point process using a Poisson variable for the number of parent points, uniform for
     the number of daughter points and Pareto distribution for the distance from the daughter points to
     the parent.
+    #Thanks to Mateus Sangalli: https://github.com/mateussangalli
     """
     def __init__(self,
                  poisson_mean: float,
@@ -190,8 +181,7 @@ listYVal=listYVal/9
 def dilation2d(x, st_element, strides, padding,rates=(1, 1)):
     """
 
-    From MORPHOLAYERS
-
+    From MORPHOLAYERS (https://github.com/Jacobiano/morpholayers)
     Basic Dilation Operator
     :param st_element: Nonflat structuring element
     :strides: strides as classical convolutional layers
@@ -269,6 +259,8 @@ class DepthwiseDilation2D(Layer):
 
 
 
+##Create the Depthwise Convolutional Model
+
 xinput = layers.Input(shape=(IMG_SIZE, IMG_SIZE, CHANNELS))
 xconv=xinput
 for i in range(NLAYERS):
@@ -291,11 +283,14 @@ CBDW=[tf.keras.callbacks.EarlyStopping(patience=PATIENCE_ES,restore_best_weights
     tf.keras.callbacks.ReduceLROnPlateau(patience=PATIENCE_RP,min_lr=1e-6),
     tf.keras.callbacks.CSVLogger(dir_autosave_model_stat+'DWConv', separator=',', append=False)
    ]
+   
+##Compile and train the Depthwise Convolutional Model
+
 modelDWConv.compile(loss="mae", optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate), metrics=["mse","mae"])
 histDWConv=modelDWConv.fit(listIm, listY, batch_size=batch_size, epochs=epochs,callbacks=CBDW,validation_data=(listImVal, listYVal))
 
 
-
+##Create the Convolutional Model
 
 xinput = layers.Input(shape=(IMG_SIZE, IMG_SIZE, CHANNELS))
 xconv=xinput
@@ -319,6 +314,7 @@ modelConv.compile(loss="mae", optimizer=tf.keras.optimizers.Adam(learning_rate=l
 histConv=modelConv.fit(listIm, listY, batch_size=batch_size, epochs=epochs,callbacks=CB1,validation_data=(listImVal, listYVal))
 
 
+##Create the Proposed Model
 xinput = layers.Input(shape=(IMG_SIZE, IMG_SIZE, CHANNELS))
 xconv=xinput
 for i in range(NLAYERS):

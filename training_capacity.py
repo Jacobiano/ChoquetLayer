@@ -68,13 +68,6 @@ if LOG:
    this_file_name = os.path.basename(__file__)
    copyfile(__file__, os.path.join(dir_name, this_file_name))
    print('copyfile','ok')
-   #print('dir_name plus parameter  json')
-   #print(os.path.join(dir_name, "parameter.json"))
-   #outfile=open(os.path.join(dir_name, "parameter.json"), 'w' )
-   #jsondic=vars(args)
-   #jsondic["dir_name"] = dir_name
-   #json.dump(jsondic,outfile)
-   #outfile.close()
 
 class NeymanScott:
     """
