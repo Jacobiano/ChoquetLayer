@@ -5,9 +5,6 @@
 Santiago VELASCO-FORERO
 [Personal Website](https://people.cmm.minesparis.psl.eu/users/velasco/)
 
-![](manuscript/figures/hawaii-trend.png)
-
-*Caption for the example figure with the main results.*
 
 ## Abstract
 
@@ -15,8 +12,7 @@ Santiago VELASCO-FORERO
 
 ## Getting the code
 
-You can download a copy of all the files in the repository morpholayersby cloning the
-[git](https://git-scm.com/) repository:
+You can download a copy of all the files in the repository morpholayersby cloning the repository:
 
     git clone https://github.com/Jacobiano/ChoquetLayer.git
 
