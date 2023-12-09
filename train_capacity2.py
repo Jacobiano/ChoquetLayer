@@ -174,6 +174,8 @@ print('listImVal.shape',listImVal.shape)
 print('listY.shape',listY.shape)
 print('listYVal.shape',listYVal.shape)
 
+
+#In the regression problem we normalize the values to be between 0 to 1. In the model we have a sigmoid as final activation function.
 listY=listY/9
 listYVal=listYVal/9
 
