@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//Mac OS X 10.13.6//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+CREATED:20210219T090650Z
+UID:B7653E4E-BEBB-418D-AEC4-FDB948038765
+DTEND;TZID=Europe/Paris:20210222T150000
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+SUMMARY:Séminaire MINES
+DTSTART;TZID=Europe/Paris:20210222T140000
+DTSTAMP:20210219T090722Z
+X-APPLE-EWS-BUSYSTATUS:BUSY
+SEQUENCE:0
+DESCRIPTION:Bonjour à toutes et tous\,\n\nCe lundi 22 février à 14h Joan
+ a Frontera-Pons nous fera l'honneur de présenter ses travaux sur les Rés
+ eaux de neurones déroulés pour la super-résolution vidéo\, dont vous tro
+ uverez le résumé ci-dessous.\n\nLe lien zoom habituel : https://mines-pa
+ ristech.zoom.us/j/96859062686?pwd=Q0plMjZ2WGcxQkdGTkZIU003MjlJZz09 \nLa 
+ page du séminaire : https://interne.cmm.mines-paristech.fr/wiki/doku.php
+ /seminaires/start\n\n\nRéseaux de neurones déroulés pour la super-résolu
+ tion vidéo\n\n
+END:VEVENT
+END:VCALENDAR

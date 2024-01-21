@@ -1,0 +1,58 @@
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20210219T155419Z
+LAST-MODIFIED:20210219T160113Z
+DTSTAMP:20210219T160113Z
+UID:947ee310-9d82-462f-b6ad-848c600b3e51
+SUMMARY:ML + Forage
+ORGANIZER;ROLE=REQ-PARTICIPANT:mailto:laurent.gerbaud@mines-paristech.fr
+ATTENDEE;RSVP=TRUE;CN=Florent DI MEGLIO;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PAR
+ TICIPANT:mailto:florent.di_meglio@mines-paristech.fr
+ATTENDEE;RSVP=TRUE;CN=Erwan CHAMPEVILLE DE BOISJOLLY;PARTSTAT=NEEDS-ACTION
+ ;ROLE=REQ-PARTICIPANT:mailto:erwan.champeville_de_boisjolly@mines-paristec
+ h.fr
+ATTENDEE;RSVP=TRUE;CN=bruno figliuzzi;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTI
+ CIPANT:mailto:bruno.figliuzzi@mines-paristech.fr
+ATTENDEE;RSVP=TRUE;CN=Thomas ROMARY;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICI
+ PANT:mailto:thomas.romary@mines-paristech.fr
+ATTENDEE;RSVP=TRUE;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT:mailto:santi
+ ago.velasco@mines-paristech.fr
+DTSTART;TZID=Europe/Paris:20210226T090000
+DTEND;TZID=Europe/Paris:20210226T110000
+TRANSP:OPAQUE
+DESCRIPTION:Bonjour\,\n\nJ'ai une réunion à 11h donc j'ai déplacé la r
+ éunion de 9 à 11. J'espère que vous êtes disponible.\nPour rappel : \n
+ - Présentation du/des data set (données fond et surface)\n- Présentatio
+ n des travaux de Clustering réalisés par Erwan\n- Discussion sur la suit
+ e (Réseau de neurone convolutif\, Pré processing des données\, Transfer
+ t learning\, ...)\n- Discussion sur un sujet de thèse envisageable sur le
+  sujet (si on fait la réunion dès le 01 mars\, cela permettra de propose
+ r un sujet pour l'Ecole Doctorale)\n\n@Thomas : Peux tu me donner des disp
+ os la semaine prochaine pour que l'on fasse un point. \n\nlien pour la vis
+ io : \nTitre / Title : ML + Forage\nDate : 26/02/2021 De 09h00 A 11h00\nLi
+ en / Link : https://mines-paristech.zoom.us/j/92726367584?pwd=YUNvRVM5V3Y2
+ WmVHakxuQTJZMG9udz09\n\nID de la réunion / Meeting ID : 92726367584\nMot 
+ de passe / Password : 698883\n\nBon week end\n\nLaurent\n
+END:VEVENT
+END:VCALENDAR
+

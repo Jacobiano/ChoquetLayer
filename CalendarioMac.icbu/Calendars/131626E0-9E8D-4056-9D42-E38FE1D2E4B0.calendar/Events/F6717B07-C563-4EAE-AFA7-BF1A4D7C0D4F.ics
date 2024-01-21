@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//Mac OS X 10.13.6//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+CREATED:20190228T175453Z
+UID:F6717B07-C563-4EAE-AFA7-BF1A4D7C0D4F
+DTEND;TZID=Europe/Paris:20190318T180000
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+SUMMARY:We are very pleased to host on Monday\, March 18\, 17:00\nRobert
+  Tarjan (Princeton University and Intertrust Technologies) as a speaker 
+ \nin our IRIF Distinguished Talks Series. \n\nThe talk will take place i
+ n Amphithéâtre Guillaume Budé - Marcelin Berthelot -\nCollège de France.
+ \nPLEASE NOTE THE UNUSUAL VENUE AND UNUSUAL DAY.\n\n\nThe talk is entitl
+ ed "Concurrent Connected Components" and the\nabstract can be found belo
+ w as well as on the IRIF seminar webpage at \nhttps://www.irif.fr/semina
+ ires/irif/index .\n\nbest regards\, \n\nAdi Rosen\n
+DTSTART;TZID=Europe/Paris:20190318T170000
+DTSTAMP:20190228T175506Z
+X-APPLE-EWS-BUSYSTATUS:BUSY
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

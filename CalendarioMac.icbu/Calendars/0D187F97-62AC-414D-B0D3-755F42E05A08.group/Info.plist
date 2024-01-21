@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Calendars</key>
+	<array/>
+	<key>Color</key>
+	<string>#808080FF</string>
+	<key>Enabled</key>
+	<true/>
+	<key>Expanded</key>
+	<false/>
+	<key>Key</key>
+	<string>0D187F97-62AC-414D-B0D3-755F42E05A08</string>
+	<key>Order</key>
+	<integer>0</integer>
+	<key>Title</key>
+	<string>Chess</string>
+	<key>Type</key>
+	<string>Local</string>
+</dict>
+</plist>
